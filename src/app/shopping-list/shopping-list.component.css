@@ -1,0 +1,24 @@
+h1,
+h3 {
+  margin: 10px 0px 30px 0px;
+  text-align: center;
+}
+
+h3 {
+  color: rgb(156, 156, 156);
+}
+
+.table {
+  width: 90%;
+  margin: auto;
+}
+
+.mat-column-name {
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+.mat-column-quantity {
+  font-style: italic;
+  border-right: 1px solid currentColor;
+}

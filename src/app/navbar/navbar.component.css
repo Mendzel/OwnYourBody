@@ -1,0 +1,28 @@
+.toolbar_spacer {
+  flex: 1 1 auto;
+}
+
+.material-icons {
+  font-size: 2rem;
+}
+
+button {
+  border: none;
+  background: none;
+  width: 80px;
+}
+
+.toolbar_menu_button {
+  width: 200px;
+  text-decoration: none;
+  height: 64px;
+  color: black;
+  border-radius: 0px;
+}
+.toolbar_menu_button a:hover {
+  background-color: #59ff02;
+}
+
+img {
+  height: 50px;
+}

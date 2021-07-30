@@ -1,0 +1,80 @@
+<mat-accordion>
+  <mat-expansion-panel
+    hideToggle
+    class="expansion"
+    [ngClass]="{ expansion_active: isClicked }"
+  >
+    <mat-expansion-panel-header (click)="clickEvent()">
+      <mat-panel-title>
+        <img
+          class="title_img"
+          src="{{ recipe.imageURL }}"
+          alt="{{ recipe.description }}"
+        />
+        {{ recipe.mealName }}
+      </mat-panel-title>
+      <mat-panel-description>
+        Kcal: {{ recipe.kcalValue }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-grid-list cols="4" rowHeight="100px">
+      <mat-grid-tile colspan="4" rowspan="3"
+        ><img class="expansion_img" src="{{ recipe.imageURL }}"
+      /></mat-grid-tile>
+      <mat-grid-tile colspan="2">
+        <div class="expansion_name">
+          <p class="expansion_label">Nazwa:</p>
+          <p class="expansion_name_content">{{ recipe.mealName }}</p>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2" rowspan="3">
+        <div class="expansion_products">
+          <p class="expansion_label">Produkty:</p>
+          <ul>
+            <li
+              class="expansion_products_content"
+              *ngFor="let product of recipe.products"
+            >
+              {{ product }}
+            </li>
+          </ul>
+          <button mat-stroked-button color="primary">
+            Dodaj produkty do listy zakupów
+          </button>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1">
+        <div class="expansion_kcal">
+          <p class="expansion_label">Kaloryczność:</p>
+          <p class="expansion_kcal_content">{{ recipe.kcalValue }}</p>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1">
+        <div class="expansion_mealType">
+          <p class="expansion_label">Typ posiłku:</p>
+          <p class="expansion_mealType_content">{{ recipe.mealType }}</p>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2">
+        <div class="expansion_description">
+          <p class="expansion_label">Opis:</p>
+          <p class="expansion_description_content">{{ recipe.description }}</p>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="4" rowspan="2">
+        <div class="expansion_stepByStep">
+          <p class="expansion_label">Przygotowanie::</p>
+          <p
+            class="expansion_stepByStep_content"
+            *ngFor="let step of recipe.stepByStep; let i = index"
+          >
+            Krok {{ i + 1 }}: {{ step }}
+          </p>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="4">
+        <button mat-stroked-button color="warn">Edytuj przepis</button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,0 +1,54 @@
+<h1>Lista Przepisów</h1>
+
+<mat-tab-group mat-align-tabs="start">
+  <mat-tab label="Śniadania">
+    <div class="list">
+      <app-recipe-item
+        *ngFor="let recipe of breakfasts"
+        [recipe]="recipe"
+      ></app-recipe-item>
+    </div>
+  </mat-tab>
+  <mat-tab label="Obiady">
+    <div class="list">
+      <app-recipe-item
+        *ngFor="let recipe of dinners"
+        [recipe]="recipe"
+      ></app-recipe-item>
+    </div>
+  </mat-tab>
+  <mat-tab label="Kolacje">
+    <div class="list">
+      <app-recipe-item
+        *ngFor="let recipe of suppers"
+        [recipe]="recipe"
+      ></app-recipe-item>
+    </div>
+  </mat-tab>
+  <mat-tab label="Przekąski">
+    <div class="list">
+      <app-recipe-item
+        *ngFor="let recipe of snacks"
+        [recipe]="recipe"
+      ></app-recipe-item>
+    </div>
+  </mat-tab>
+  <mat-tab label="Sałatki">
+    <div class="list">
+      <app-recipe-item
+        *ngFor="let recipe of salads"
+        [recipe]="recipe"
+      ></app-recipe-item>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+<button
+  mat-raised-button
+  type="button"
+  color="primary"
+  (click)="newRecipeClicked()"
+>
+  Nowy Przepis
+</button>
+<app-new-recipe *ngIf="recipeService.displayRecipe"> </app-new-recipe>

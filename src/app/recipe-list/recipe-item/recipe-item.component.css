@@ -1,0 +1,37 @@
+mat-grid-list {
+  background-color: #fffcd9;
+}
+
+.expansion {
+  margin-bottom: 5px;
+}
+
+.expansion_active {
+  border: 2px solid #76ff03;
+}
+
+div {
+  position: absolute;
+  left: 15px;
+}
+.title_img {
+  height: 40px;
+}
+
+.expansion_img {
+  height: 300px;
+  margin-top: 15px;
+}
+
+.expansion_label {
+  font-size: 18px;
+  font-weight: lighter;
+  color: rgb(172, 172, 172);
+}
+
+.expansion_name_content,
+.expansion_kcal_content,
+.expansion_mealType_content {
+  font-weight: bold;
+  font-size: 18px;
+}

@@ -1,0 +1,56 @@
+<div>
+  <form [formGroup]="newRecipe" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Nazwa:</mat-label>
+      <input
+        class="form_input"
+        matInput
+        type="text"
+        name="mealName"
+        formControlName="mealName"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Zdjęcie:</mat-label>
+      <input
+        class="form_input"
+        matInput
+        type="text"
+        name="imageURL"
+        formControlName="imageURL"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Kcal:</mat-label>
+      <input
+        class="form_input"
+        matInput
+        type="number"
+        name="kcalValue"
+        formControlName="kcalValue"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Opis:</mat-label>
+      <textarea
+        class="form_input"
+        matInput
+        name="description"
+        formControlName="description"
+        cols="30"
+        rows="10"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Typ Posiłku:</mat-label>
+      <mat-select formControlName="mealType" class="form_input">
+        <mat-option value="Śniadanie">Śniadanie</mat-option>
+        <mat-option value="Obiad">Obiad</mat-option>
+        <mat-option value="Kolacja">Kolacja</mat-option>
+        <mat-option value="Dodatek">Dodatek</mat-option>
+        <mat-option value="Sałatka">Sałatka</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Dodaj</button>
+  </form>
+</div>

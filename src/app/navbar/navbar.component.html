@@ -1,0 +1,32 @@
+<mat-toolbar color="primary" class="toolbar">
+  <div class="toolbar_logo">
+    <a routerLink="/" routerLinkActive="router-link-active"
+      ><span class="toolbar_menu_button" style="margin-right: 20px"
+        ><img src="https://i.imgur.com/vaffGe8.png" alt="" /></span
+    ></a>
+  </div>
+  <div class="toolbar_menu">
+    <a routerLink="/recipes" routerLinkActive="router-link-active"
+      ><button class="toolbar_menu_button" mat-button>Przepisy</button></a
+    >
+    <a routerLink="/calendar" routerLinkActive="router-link-active"
+      ><button class="toolbar_menu_button" mat-button>Kalendarz</button></a
+    >
+    <a routerLink="/shoppinglist" routerLinkActive="router-link-active"
+      ><button class="toolbar_menu_button" mat-button>Lista Zakupów</button></a
+    >
+  </div>
+  <span class="toolbar_spacer"></span>
+  <div class="toolbar_icons">
+    <button mat-icon-button class="toolbar_icons_login" matTooltip="Login">
+      <mat-icon>login</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="toolbar_icons_register"
+      matTooltip="Register"
+    >
+      <mat-icon>how_to_reg</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

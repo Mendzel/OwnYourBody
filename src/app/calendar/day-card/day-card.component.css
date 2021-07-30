@@ -1,0 +1,31 @@
+mat-card {
+  width: 200px;
+  border: 1px solid #76ff03;
+}
+
+mat-card-title {
+  background: #76ff03;
+  width: 100%;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+mat-card-subtitle,
+mat-card-footer {
+  text-align: center;
+}
+
+mat-icon {
+  font-size: 14px;
+  height: 14px;
+  width: 14px;
+  vertical-align: middle;
+  margin: 4px 0px;
+}
+
+button {
+  background: none;
+  border: 1px solid rgb(211, 211, 211);
+  margin-bottom: 5px;
+  width: 100%;
+}

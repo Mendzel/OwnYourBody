@@ -1,0 +1,32 @@
+<div>
+  <form [formGroup]="newProduct" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Produkt:</mat-label>
+      <input matInput type="text" name="name" formControlName="name" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Ilość:</mat-label>
+      <input
+        matInput
+        type="number"
+        name="quantity"
+        formControlName="quantity"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Jednostka Miary:</mat-label>
+      <mat-select formControlName="unit">
+        <mat-option value="szt.">Sztuki</mat-option>
+        <mat-option value="kg">Kilogramy</mat-option>
+        <mat-option value="g">Gramy</mat-option>
+        <mat-option value="ml">Litry</mat-option>
+        <mat-option value="l">Mililitry</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Cena:</mat-label>
+      <input matInput type="number" name="price" formControlName="price" />
+    </mat-form-field>
+    <button mat-stroked-button color="primary" type="submit">Wyślij</button>
+  </form>
+</div>

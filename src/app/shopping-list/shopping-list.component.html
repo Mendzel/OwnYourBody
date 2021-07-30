@@ -1,0 +1,43 @@
+<h1>Lista zakupów</h1>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Produkt</th>
+    <td mat-cell *matCellDef="let product">{{ product.name }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="quantity">
+    <th mat-header-cell *matHeaderCellDef>Ilość</th>
+    <td mat-cell *matCellDef="let product">
+      {{ product.quantity }}{{ product.unit }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef>Cena</th>
+    <td mat-cell *matCellDef="let product">{{ product.price }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="icons">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let product">
+      <button mat-icon-button color="warn">
+        <mat-icon (click)="onRemove(product)">{{ product.icon }}</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+<h3 *ngIf="shoppingListService.productList.length == 0">
+  Lista pusta. Dodaj produkty
+</h3>
+<button mat-raised-button color="primary" (click)="onAdd()">
+  Dodaj Produkt
+</button>
+<button mat-raised-button color="warn" (click)="onClear()">
+  Wyczyść Listę
+</button>
+<app-new-product
+  *ngIf="shoppingListService.displayProductForm"
+></app-new-product>
